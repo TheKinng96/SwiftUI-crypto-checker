@@ -7,6 +7,7 @@
 
 import Foundation
 
+// API info
 /*
  Coin Gecko API info
  
