@@ -21,6 +21,7 @@
 		B25425CD28858EB80008A5A0 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425CC28858EB80008A5A0 /* CoinRowView.swift */; };
 		B25425CF28858ED70008A5A0 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425CE28858ED70008A5A0 /* PreviewProvider.swift */; };
 		B25425D1288593DB0008A5A0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425D0288593DB0008A5A0 /* Double.swift */; };
+		B2B7301A28876FA100F5E75E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7301928876FA100F5E75E /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B25425CC28858EB80008A5A0 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		B25425CE28858ED70008A5A0 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		B25425D0288593DB0008A5A0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		B2B7301928876FA100F5E75E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		B25425BF28853C570008A5A0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B2B7301928876FA100F5E75E /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				B25425A72885383B0008A5A0 /* ContentView.swift in Sources */,
 				B25425CF28858ED70008A5A0 /* PreviewProvider.swift in Sources */,
 				B25425C228853C7C0008A5A0 /* HomeView.swift in Sources */,
+				B2B7301A28876FA100F5E75E /* HomeViewModel.swift in Sources */,
 				B25425BB28853B0F0008A5A0 /* Color.swift in Sources */,
 				B25425CB288547280008A5A0 /* CoinModel.swift in Sources */,
 				B25425D1288593DB0008A5A0 /* Double.swift in Sources */,
