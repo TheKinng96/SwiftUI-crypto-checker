@@ -22,6 +22,7 @@
 		B25425CF28858ED70008A5A0 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425CE28858ED70008A5A0 /* PreviewProvider.swift */; };
 		B25425D1288593DB0008A5A0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425D0288593DB0008A5A0 /* Double.swift */; };
 		B26BC49E28897D9D0056D91F /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BC49D28897D9D0056D91F /* CoinDataService.swift */; };
+		B26BC4A1288A07950056D91F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BC4A0288A07950056D91F /* NetworkManager.swift */; };
 		B2B7301A28876FA100F5E75E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7301928876FA100F5E75E /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		B25425CE28858ED70008A5A0 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		B25425D0288593DB0008A5A0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		B26BC49D28897D9D0056D91F /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		B26BC4A0288A07950056D91F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B2B7301928876FA100F5E75E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		B25425A32885383B0008A5A0 /* CryptoChecker */ = {
 			isa = PBXGroup;
 			children = (
+				B26BC49F288A07810056D91F /* Utilities */,
 				B26BC49C28897D850056D91F /* Services */,
 				B25425A42885383B0008A5A0 /* CryptoCheckerApp.swift */,
 				B25425C92885471C0008A5A0 /* Models */,
@@ -175,6 +178,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B26BC49F288A07810056D91F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B26BC4A0288A07950056D91F /* NetworkManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +268,7 @@
 				B2B7301A28876FA100F5E75E /* HomeViewModel.swift in Sources */,
 				B25425BB28853B0F0008A5A0 /* Color.swift in Sources */,
 				B25425CB288547280008A5A0 /* CoinModel.swift in Sources */,
+				B26BC4A1288A07950056D91F /* NetworkManager.swift in Sources */,
 				B25425D1288593DB0008A5A0 /* Double.swift in Sources */,
 				B25425A52885383B0008A5A0 /* CryptoCheckerApp.swift in Sources */,
 			);
