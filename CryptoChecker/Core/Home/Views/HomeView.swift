@@ -21,16 +21,18 @@ struct HomeView: View {
       VStack {
         homeHeader
         
+        HomeStatsView(showPortfolio: $showPortfolio)
+        
         SearchBarView(searchText: $vm.searchText)
         
         listHeader
         
         if !showPortfolio {
           allCoinList
-            .transition(.move(edge: .leading))
+            .transition(.move(edge: .trailing))
         } else {
           portfolioList
-            .transition(.move(edge: .trailing))
+            .transition(.move(edge: .leading))
         }
         
         Spacer(minLength: 0)

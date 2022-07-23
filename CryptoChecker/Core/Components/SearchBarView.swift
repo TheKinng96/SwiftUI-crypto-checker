@@ -38,6 +38,8 @@ struct SearchBarView: View {
         .fill(Color.theme.background)
         .shadow(color: .theme.accent.opacity(0.15), radius: 10, x: 0, y: 0)
     )
+    .padding(.horizontal)
+    .padding(.vertical, 8)
   }
 }
 
@@ -46,11 +48,9 @@ struct SearchBarView_Previews: PreviewProvider {
     Group {
       SearchBarView(searchText: .constant(""))
         .preferredColorScheme(.dark)
-        .padding()
         .previewLayout(.sizeThatFits)
       SearchBarView(searchText: .constant(""))
         .preferredColorScheme(.light)
-        .padding()
         .previewLayout(.sizeThatFits)
     }
   }
