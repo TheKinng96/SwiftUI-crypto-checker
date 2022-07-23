@@ -16,6 +16,8 @@
 		B24CA764288B9B60001A23ED /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CA763288B9B60001A23ED /* StatisticModel.swift */; };
 		B24CA766288B9C53001A23ED /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CA765288B9C53001A23ED /* StatisticView.swift */; };
 		B24CA768288BA162001A23ED /* HomeStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CA767288BA162001A23ED /* HomeStatsView.swift */; };
+		B24CA76A288BC0FA001A23ED /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CA769288BC0FA001A23ED /* MarketDataModel.swift */; };
+		B24CA76C288BC695001A23ED /* MarketDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24CA76B288BC695001A23ED /* MarketDataService.swift */; };
 		B25425A52885383B0008A5A0 /* CryptoCheckerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425A42885383B0008A5A0 /* CryptoCheckerApp.swift */; };
 		B25425A72885383B0008A5A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425A62885383B0008A5A0 /* ContentView.swift */; };
 		B25425AC2885383E0008A5A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25425AB2885383E0008A5A0 /* Preview Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		B24CA763288B9B60001A23ED /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		B24CA765288B9C53001A23ED /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		B24CA767288BA162001A23ED /* HomeStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatsView.swift; sourceTree = "<group>"; };
+		B24CA769288BC0FA001A23ED /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		B24CA76B288BC695001A23ED /* MarketDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataService.swift; sourceTree = "<group>"; };
 		B25425A12885383B0008A5A0 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25425A42885383B0008A5A0 /* CryptoCheckerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCheckerApp.swift; sourceTree = "<group>"; };
 		B25425A62885383B0008A5A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			children = (
 				B25425CA288547280008A5A0 /* CoinModel.swift */,
 				B24CA763288B9B60001A23ED /* StatisticModel.swift */,
+				B24CA769288BC0FA001A23ED /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			children = (
 				B26BC49D28897D9D0056D91F /* CoinDataService.swift */,
 				B24CA759288AD1D8001A23ED /* CoinImageService.swift */,
+				B24CA76B288BC695001A23ED /* MarketDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				B25425A72885383B0008A5A0 /* ContentView.swift in Sources */,
 				B24CA75C288AD438001A23ED /* CoinImageViewModel.swift in Sources */,
 				B24CA764288B9B60001A23ED /* StatisticModel.swift in Sources */,
+				B24CA76C288BC695001A23ED /* MarketDataService.swift in Sources */,
 				B25425CF28858ED70008A5A0 /* PreviewProvider.swift in Sources */,
 				B24CA766288B9C53001A23ED /* StatisticView.swift in Sources */,
 				B25425C228853C7C0008A5A0 /* HomeView.swift in Sources */,
@@ -314,6 +321,7 @@
 				B25425CB288547280008A5A0 /* CoinModel.swift in Sources */,
 				B26BC4A1288A07950056D91F /* NetworkManager.swift in Sources */,
 				B25425D1288593DB0008A5A0 /* Double.swift in Sources */,
+				B24CA76A288BC0FA001A23ED /* MarketDataModel.swift in Sources */,
 				B25425A52885383B0008A5A0 /* CryptoCheckerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
