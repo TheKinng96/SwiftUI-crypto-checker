@@ -36,6 +36,11 @@ struct PortfolioView: View {
           saveButton
         }
       }
+      .onChange(of: vm.searchText) { value in
+        if value == "" {
+          removeSelectedCoin()
+        }
+      }
     } //: NAVIGATION
   }
 }
@@ -75,34 +80,37 @@ extension PortfolioView {
   }
   
   private var portfolioInpuSection: some View {
-    VStack {
-      HStack{
-        Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
-        Spacer()
-        Text(selectedCoin?.currentPrice.asCurrencyWith6Decimals() ?? "")
-      } //: HSTACK
-      
-      Divider()
-      
-      HStack {
-        Text("Amount in your portfolio:")
-        Spacer()
-        TextField("Ex 2.0", text: $quantityText)
-          .multilineTextAlignment(.trailing)
-          .keyboardType(.numberPad)
-      } //: HSTACK
-      
-      Divider()
-      
-      HStack {
-        Text("Current value:")
-        Spacer()
-        Text(getCurrentValue().asCurrencyWith2Decimals())
-      } //: HSTACK
-    } //: VSTACK
-    .padding()
-    .font(.headline)
+    GroupBox {
+      VStack {
+        HStack{
+          Text("Current price of \(selectedCoin?.symbol.uppercased() ?? ""):")
+          Spacer()
+          Text(selectedCoin?.currentPrice.asCurrencyWith6Decimals() ?? "")
+        } //: HSTACK
+        
+        Divider()
+        
+        HStack {
+          Text("Amount in your portfolio:")
+          Spacer()
+          TextField("Ex 2.0", text: $quantityText)
+            .multilineTextAlignment(.trailing)
+            .keyboardType(.numberPad)
+        } //: HSTACK
+        
+        Divider()
+        
+        HStack {
+          Text("Current value:")
+          Spacer()
+          Text(getCurrentValue().asCurrencyWith2Decimals())
+        } //: HSTACK
+      } //: VSTACK
+      .padding()
+      .font(.headline)
     .animation(.none, value: UUID())
+    } //: GROUPBOX
+    .padding(.horizontal)
   }
   
   private var saveButton: some View {
@@ -124,7 +132,12 @@ extension PortfolioView {
   }
   
   private func saveButtonPressed() {
-    guard let coin = selectedCoin else {return}
+    guard
+      let coin = selectedCoin,
+      let amount = Double(quantityText)
+    else {return}
+    
+    vm.updatePortfolio(coin: coin, amount: amount)
     
     withAnimation(.easeIn) {
       showCheckMark = true
