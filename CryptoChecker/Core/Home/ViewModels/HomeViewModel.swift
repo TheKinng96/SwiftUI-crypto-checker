@@ -54,7 +54,7 @@ class HomeViewModel: ObservableObject {
           }
       }
       .sink { [weak self] (returnedCoins) in
-        self?.portfolioCoins = returnedCoins
+        self?.portfolioCoins  = returnedCoins
       }
       .store(in: &cancellables)
   }
