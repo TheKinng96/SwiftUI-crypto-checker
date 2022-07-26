@@ -36,6 +36,7 @@
 		B25425D1288593DB0008A5A0 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25425D0288593DB0008A5A0 /* Double.swift */; };
 		B26BC49E28897D9D0056D91F /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BC49D28897D9D0056D91F /* CoinDataService.swift */; };
 		B26BC4A1288A07950056D91F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BC4A0288A07950056D91F /* NetworkManager.swift */; };
+		B2A728A3289015170017781F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A728A2289015170017781F /* HapticManager.swift */; };
 		B2B7301A28876FA100F5E75E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7301928876FA100F5E75E /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		B25425D0288593DB0008A5A0 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		B26BC49D28897D9D0056D91F /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		B26BC4A0288A07950056D91F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B2A728A2289015170017781F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		B2B7301928876FA100F5E75E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 			children = (
 				B26BC4A0288A07950056D91F /* NetworkManager.swift */,
 				B24CA75D288B7009001A23ED /* LocalFileManager.swift */,
+				B2A728A2289015170017781F /* HapticManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				B24CA762288B80DB001A23ED /* UIApplication.swift in Sources */,
 				B25425BB28853B0F0008A5A0 /* Color.swift in Sources */,
 				B25425CB288547280008A5A0 /* CoinModel.swift in Sources */,
+				B2A728A3289015170017781F /* HapticManager.swift in Sources */,
 				B26BC4A1288A07950056D91F /* NetworkManager.swift in Sources */,
 				B25425D1288593DB0008A5A0 /* Double.swift in Sources */,
 				B24CA76A288BC0FA001A23ED /* MarketDataModel.swift in Sources */,
