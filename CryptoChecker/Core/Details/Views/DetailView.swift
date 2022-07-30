@@ -34,23 +34,31 @@ struct DetailView: View {
 
   var body: some View {
     ScrollView {
-      VStack(spacing: 20) {
-        Text("")
-          .frame(height: 150)
-        
-        TitleView(title: "Overview")
-        Divider()
-        
-        overviewGrid
-        
-        TitleView(title: "Additional Details")
-        Divider()
-        
-        addtionalGrid
+      VStack {
+        ChartView(coin: vm.coin)
+          .padding(.vertical)
+
+        VStack(spacing: 20) {
+          
+          TitleView(title: "Overview")
+          Divider()
+          
+          overviewGrid
+          
+          TitleView(title: "Additional Details")
+          Divider()
+          
+          addtionalGrid
+        } //: VSTACK
+        .padding()
       } //: VSTACK
-      .padding()
     } //: SCROLL
     .navigationTitle(vm.coin.name)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        detailIcon
+      }
+    }
   }
 }
 
@@ -63,6 +71,17 @@ struct DetailView_Previews: PreviewProvider {
 }
 
 extension DetailView {
+  private var detailIcon: some View {
+    HStack {
+      Text(vm.coin.symbol.uppercased())
+        .font(.headline)
+        .foregroundColor(.theme.secondaryText)
+
+      CoinImageView(coin: vm.coin)
+        .frame(width: 25, height: 25)
+    } //: HSTACK
+  }
+  
   private var overviewGrid: some View {
     LazyVGrid(
       columns: columns,
