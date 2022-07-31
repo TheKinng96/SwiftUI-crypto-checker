@@ -11,6 +11,9 @@ import Combine
 class DetailViewModel: ObservableObject {
   @Published var overviewStatistics: [StatisticModel] = []
   @Published var additionalStatistics: [StatisticModel] = []
+  @Published var coinDescription: String? = nil
+  @Published var redditUrl: String? = nil
+  @Published var websiteUrl: String? = nil
   
   @Published var coin: CoinModel
   private let coinDetailService: CoinDetailDataService
@@ -29,6 +32,14 @@ class DetailViewModel: ObservableObject {
       .sink { [weak self] (returnedData) in
         self?.overviewStatistics = returnedData.overview
         self?.additionalStatistics = returnedData.additional
+      }
+      .store(in: &cancellables)
+    
+    coinDetailService.$coinDetail
+      .sink { [weak self] (returnedCoinDetails) in
+        self?.coinDescription = returnedCoinDetails?.readableDescription
+        self?.redditUrl = returnedCoinDetails?.links?.subredditURL
+        self?.websiteUrl = returnedCoinDetails?.links?.homepage?.first
       }
       .store(in: &cancellables)
   }
