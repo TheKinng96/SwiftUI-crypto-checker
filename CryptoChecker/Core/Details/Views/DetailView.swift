@@ -53,6 +53,8 @@ struct DetailView: View {
           Divider()
           
           addtionalGrid
+          
+          linkSection
         } //: VSTACK
         .padding()
       } //: VSTACK
@@ -135,5 +137,21 @@ extension DetailView {
         .frame(maxWidth: .infinity, alignment: .leading)
       }
     } //: VSTACK
+  }
+  
+  private var linkSection: some View {
+    VStack(alignment: .leading, spacing: 10) {
+      if let link = vm.websiteUrl,
+         let url = URL(string: link) {
+        Link("Website", destination: url)
+      }
+      
+      if let redditLink = vm.redditUrl,
+         let url = URL(string: redditLink) {
+        Link("Reddit", destination: url)
+      }
+    } //: VSTACK
+    .foregroundColor(.blue)
+    .frame(maxWidth: .infinity, alignment: .leading)
   }
 }
