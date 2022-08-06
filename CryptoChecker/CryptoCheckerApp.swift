@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct CryptoCheckerApp: App {
   @StateObject var vm = HomeViewModel()
+  @State private var showLaunchView: Bool = true
   
   init() {
     UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
@@ -18,11 +19,21 @@ struct CryptoCheckerApp: App {
   
   var body: some Scene {
     WindowGroup {
-      NavigationView {
-        HomeView()
-          .navigationBarHidden(true)
-      } //: NAVIGATION VIEW
-      .environmentObject(vm)
+      ZStack {
+        NavigationView {
+          HomeView()
+            .navigationBarHidden(true)
+        } //: NAVIGATION VIEW
+        .environmentObject(vm)
+        
+        ZStack {
+          if showLaunchView {
+            LaunchView(showLaunchView: $showLaunchView)
+              .transition(.move(edge: .leading))
+          }
+        } //: ZSTACK
+        .zIndex(2)
+      } //: ZSTACK
     }
   }
 }
