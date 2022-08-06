@@ -39,8 +39,14 @@ struct HomeView: View {
           allCoinList
             .transition(.move(edge: .trailing))
         } else {
-          portfolioList
-            .transition(.move(edge: .leading))
+          ZStack {
+            if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+              portfolioEmptyText
+            } else {
+              portfolioList
+            }
+          } //: ZSTACK
+          .transition(.move(edge: .leading))
         }
         
         Spacer(minLength: 0)
@@ -69,11 +75,17 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 extension HomeView {
+  private var portfolioEmptyText: some View {
+    Text("You haven't added any coins to your portfolio yet. Click the + button on the top left to get started!")
+      .padding()
+  }
+
   private var homeHeader: some View {
     HStack {
       CircleButtonView(iconName: showPortfolio ? "plus" : "info")
         .animation(.none, value: showPortfolio)
         .onTapGesture {
+          HapticManager.notification(type: .success)
           if showPortfolio {
             showProtfolioView.toggle()
           } else {
@@ -96,6 +108,7 @@ extension HomeView {
       CircleButtonView(iconName: "chevron.right")
         .rotationEffect(Angle.degrees(showPortfolio ? 180 : 0))
         .onTapGesture {
+          HapticManager.notification(type: .success)
           withAnimation(.spring()) {
             showPortfolio.toggle()
           }

@@ -24,6 +24,7 @@ struct CryptoCheckerApp: App {
           HomeView()
             .navigationBarHidden(true)
         } //: NAVIGATION VIEW
+        .navigationViewStyle(StackNavigationViewStyle())
         .environmentObject(vm)
         
         ZStack {
