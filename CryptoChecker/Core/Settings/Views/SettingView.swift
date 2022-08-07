@@ -15,12 +15,21 @@ struct SettingView: View {
   
   var body: some View {
     NavigationView {
-      List {
-        aboutApp
-        geckoSection
-        devSection
-        applicationSection
-      } //: LIST
+      ZStack {
+        Color.theme.background
+          .ignoresSafeArea()
+        
+        List {
+          aboutApp
+            .listRowBackground(Color.theme.background.opacity(0.5))
+          geckoSection
+            .listRowBackground(Color.theme.background.opacity(0.5))
+          devSection
+            .listRowBackground(Color.theme.background.opacity(0.5))
+          applicationSection
+            .listRowBackground(Color.theme.background.opacity(0.5))
+        } //: LIST
+      } //: ZSTACK
       .font(.headline)
       .tint(Color.blue)
       .listStyle(GroupedListStyle())
@@ -47,16 +56,16 @@ extension SettingView {
         Image("logo")
           .resizable()
           .frame(width: 100, height: 100)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-      
-      Text("""
+          .clipShape(RoundedRectangle(cornerRadius: 20))
+        
+        Text("""
       This app is originally designed and coded by @SwiftfulThinking.
       Code partially updated by Gen.
       """)
-      .font(.callout)
-      .fontWeight(.medium)
-      .foregroundColor(.theme.accent)
-      .multilineTextAlignment(.leading)
+        .font(.callout)
+        .fontWeight(.medium)
+        .foregroundColor(.theme.accent)
+        .multilineTextAlignment(.leading)
       }
       .padding(.vertical)
       
@@ -66,7 +75,7 @@ extension SettingView {
       Text("About App")
     })
   }
-
+  
   private var geckoSection: some View {
     Section(content: {
       VStack(alignment: .leading) {
@@ -74,12 +83,12 @@ extension SettingView {
           .resizable()
           .scaledToFit()
           .frame(height: 100)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-      
-      Text("Crypto data comes from coin gecko free API.")
-      .font(.callout)
-      .fontWeight(.medium)
-      .foregroundColor(.theme.accent)
+          .clipShape(RoundedRectangle(cornerRadius: 20))
+        
+        Text("Crypto data comes from coin gecko free API.")
+          .font(.callout)
+          .fontWeight(.medium)
+          .foregroundColor(.theme.accent)
       }
       .padding(.vertical)
       
@@ -96,12 +105,12 @@ extension SettingView {
           .resizable()
           .scaledToFit()
           .frame(height: 100)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
-      
-      Text("This app was developed by Gen. ")
-      .font(.callout)
-      .fontWeight(.medium)
-      .foregroundColor(.theme.accent)
+          .clipShape(RoundedRectangle(cornerRadius: 20))
+        
+        Text("This app was developed by Gen. ")
+          .font(.callout)
+          .fontWeight(.medium)
+          .foregroundColor(.theme.accent)
       }
       .padding(.vertical)
       

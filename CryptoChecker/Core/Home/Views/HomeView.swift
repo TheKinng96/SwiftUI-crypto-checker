@@ -37,8 +37,10 @@ struct HomeView: View {
         
         if !showPortfolio {
           allCoinList
-            .transition(.move(edge: .trailing))
-        } else {
+            .transition(.move(edge: .leading))
+        }
+        
+        if showPortfolio {
           ZStack {
             if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
               portfolioEmptyText
@@ -46,7 +48,7 @@ struct HomeView: View {
               portfolioList
             }
           } //: ZSTACK
-          .transition(.move(edge: .leading))
+          .transition(.move(edge: .trailing))
         }
         
         Spacer(minLength: 0)
@@ -71,6 +73,7 @@ struct HomeView_Previews: PreviewProvider {
         .navigationBarHidden(true)
     }
     .environmentObject(dev.homeVM)
+    .preferredColorScheme(.dark)
   }
 }
 
@@ -125,6 +128,7 @@ extension HomeView {
           .onTapGesture {
             segue(coin: coin)
           }
+          .listRowBackground(Color.clear)
       }
     }
     .listStyle(PlainListStyle())
@@ -141,6 +145,7 @@ extension HomeView {
           .onTapGesture {
             segue(coin: coin)
           }
+          .listRowBackground(Color.clear)
       }
     }
     .listStyle(PlainListStyle())

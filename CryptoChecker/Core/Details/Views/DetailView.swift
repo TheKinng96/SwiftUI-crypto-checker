@@ -59,6 +59,10 @@ struct DetailView: View {
         .padding()
       } //: VSTACK
     } //: SCROLL
+    .background(
+      Color.theme.background
+        .ignoresSafeArea()
+    )
     .navigationTitle(vm.coin.name)
     .toolbar {
       ToolbarItem(placement: .navigationBarTrailing) {

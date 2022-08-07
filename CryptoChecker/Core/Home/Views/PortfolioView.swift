@@ -26,6 +26,10 @@ struct PortfolioView: View {
           }
         } //: VSTACK
       } //：SCROLL
+      .background(
+        Color.theme.background
+          .ignoresSafeArea()
+      )
       .navigationTitle("Edit Portfolio")
       .toolbar {
         ToolbarItem(placement: .navigationBarLeading) {
@@ -68,6 +72,7 @@ extension PortfolioView {
                 )
             )
             .onTapGesture {
+              UIApplication.shared.endEditing()
               withAnimation(.easeIn) {
                 selectedCoin = coin
                 updateSelectedCoin(coin: coin)
