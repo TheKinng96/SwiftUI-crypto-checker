@@ -145,6 +145,15 @@ extension HomeView {
           .onTapGesture {
             segue(coin: coin)
           }
+          .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+            Button(action: {
+              vm.deletePortfolio(coin: coin)
+              HapticManager.notification(type: .success)
+            }, label: {
+              Image(systemName: "trash.fill")
+            })
+            .tint(.red)
+          })
           .listRowBackground(Color.clear)
       }
     }

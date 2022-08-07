@@ -40,6 +40,12 @@ class PortfolioDataService {
     }
   }
   
+  func removePortfolio(coin: CoinModel) {
+    if let entity = savedEntities.first(where: { $0.coinId == coin.id }) {
+      delete(entity: entity)
+    }
+  }
+  
   // MARK: Private section
   private func getPortfolio() {
     let request = NSFetchRequest<PortfolioEntity>(entityName: entityName)
